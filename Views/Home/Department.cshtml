@@ -1,0 +1,14 @@
+﻿@model MVCExampleNick.Models.MainViewModel
+
+@{
+    ViewData["Title"] = "Department Page";
+}
+
+<form method="post" action="/Home/Department">
+    <input asp-for="Name" />
+
+    
+    @await Html.PartialAsync("_DepartmentManyPartial", Model.Departments)
+    <input type="submit" value="submit" />
+
+</form>
